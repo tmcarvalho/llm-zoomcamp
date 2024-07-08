@@ -163,3 +163,4 @@ cython_debug/
 
 open-aikey.txt
 docker-run.txt
+huggingface.txt
