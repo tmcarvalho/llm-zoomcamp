@@ -1,0 +1,22 @@
+curl -fsSL https://ollama.com/install.sh | sh
+
+ollama start
+ollama pull phi3
+ollama run phi3
+
+sudo docker run -it \
+    -v ollama:/root/.ollama \
+    -p 11435:11434 \
+    --name ollama \
+    ollama/ollama
+
+
+# Pulling the model
+sudo docker exec -it ollama bash
+ollama pull phi3
+
+# delete all images
+sudo docker system prune -a --volumes
+
+# run docker-compose
+sudo docker-compose up
