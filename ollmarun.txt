@@ -15,8 +15,5 @@ sudo docker run -it \
 sudo docker exec -it ollama bash
 ollama pull phi3
 
-# delete all images
-sudo docker system prune -a --volumes
-
 # run docker-compose
 sudo docker-compose up
